@@ -12,7 +12,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
-/* import { DrawerButton } from '../../../DetailViewDrawerContainer/DrawerDetailView/DrawerDetailView'; */
+import { DetailViewContainer } from '../../../DetailViewContainer/DetailViewContainer';
 
 const MenuItemDetail = () => {
 
@@ -50,7 +50,7 @@ const MenuItemDetail = () => {
                 onClose={handleCloseUserMenu}
             >
                 <MenuList >
-                  {/*   <DrawerButton /> */}
+                 <DetailViewContainer/>
                     <MenuItem>
                         <ListItemIcon>
                             <PowerSettingsNewOutlinedIcon fontSize="small" />

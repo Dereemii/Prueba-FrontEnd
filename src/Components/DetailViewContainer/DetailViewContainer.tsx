@@ -1,15 +1,17 @@
 import { useState } from 'react'
 
-import { Drawer, Typography, Card, ListItemIcon, ListItemText, MenuItem } from '@mui/material'
+import { Drawer, ListItemIcon, ListItemText, MenuItem } from '@mui/material'
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
-export const DetailView = () => {
+import { DetailView } from './DetailView/DrawerDetailView';
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+export const DetailViewContainer = () => {
 
-    return (
-        <>
-            <MenuItem onClick={() => setIsDrawerOpen(true)}>
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+
+  return (
+    <>
+     <MenuItem onClick={() => setIsDrawerOpen(true)}>
                     <ListItemIcon >
                         <RemoveRedEyeOutlinedIcon fontSize="small" />
                     </ListItemIcon>
@@ -20,10 +22,8 @@ export const DetailView = () => {
                 anchor='right'
                 open={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}>
-                <Card sx={{ minWidth: 275 }} role='presentation'>
-                    
-                </Card>
+                    <DetailView/>           
             </Drawer>
-        </>
-    )
+    </>
+  )
 }
