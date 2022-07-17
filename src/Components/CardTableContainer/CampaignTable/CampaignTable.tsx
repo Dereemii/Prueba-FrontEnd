@@ -232,7 +232,7 @@ export default function EnhancedTable() {
   const [orderBy, setOrderBy] = React.useState<keyof Data>('tipo');
   const [selected, setSelected] = React.useState<readonly string[]>([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
+
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleRequestSort = (
@@ -296,7 +296,6 @@ export default function EnhancedTable() {
         <Table
           sx={{ minWidth: 750 }}
           aria-labelledby="tableTitle"
-          size={dense ? 'small' : 'medium'}
         >
           <EnhancedTableHead
             numSelected={selected.length}
@@ -359,9 +358,6 @@ export default function EnhancedTable() {
               })}
             {emptyRows > 0 && (
               <TableRow
-                style={{
-                  height: (dense ? 33 : 53) * emptyRows,
-                }}
               >
                 <TableCell colSpan={6} />
               </TableRow>
