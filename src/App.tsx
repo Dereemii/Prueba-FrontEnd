@@ -1,12 +1,19 @@
-import React from 'react';
-
+import { Dashboard } from "./Components/Dashboard/Dashboard";
+import Container from '@mui/material/Container';
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <>
-    <h1>hola</h1>
+      <Container maxWidth={false} disableGutters={true} >
+        <Header />
+        <Dashboard />
+      </Container>
+
     </>
-  );
+
+  )
 }
+
 
 export default App;
