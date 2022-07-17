@@ -7,7 +7,7 @@ import { SideBar } from './SideBar/SideBar';
 import { CardTableContainer } from '../CardTableContainer/CardTableContainer';
 import { CampaignToolBar } from '../CardTableContainer/CampaignToolBar/CampaignToolBar';
 
-export const ClippedDrawer = () => {
+export const ClippedDrawerContainer = () => {
     return (
         <>
             <Box sx={{ display: 'flex' }}>

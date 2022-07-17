@@ -19,7 +19,7 @@ const Header = () => {
     };
 
     return (
-        <AppBar style={{ background: '#FFFFFF' }} position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} >
+        <AppBar style={{ background: '#FFFFFF' }} position="fixed" /* sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} */ >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box>

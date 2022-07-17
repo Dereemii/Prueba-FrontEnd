@@ -9,22 +9,23 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
+import { DrawerButton } from '../../../DetailViewDrawerContainer/DrawerButton/DrawerButton';
+
 const MenuItemDetail = () => {
 
-    const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    const [anchorViewDetail, setAnchorViewDetail] = React.useState<null | HTMLElement>(
         null
     );
 
     const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
+        setAnchorViewDetail(event.currentTarget);
     };
 
     const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
+        setAnchorViewDetail(null);
     };
 
     return (
@@ -35,7 +36,7 @@ const MenuItemDetail = () => {
             <Menu
                 sx={{ mt: '45px' }}
                 id="menu-appbar"
-                anchorEl={anchorElUser}
+                anchorEl={anchorViewDetail}
                 anchorOrigin={{
                     vertical: 'top',
                     horizontal: 'right',
@@ -45,16 +46,11 @@ const MenuItemDetail = () => {
                     vertical: 'top',
                     horizontal: 'right',
                 }}
-                open={Boolean(anchorElUser)}
+                open={Boolean(anchorViewDetail)}
                 onClose={handleCloseUserMenu}
             >
                 <MenuList>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <RemoveRedEyeOutlinedIcon fontSize="small" />
-                        </ListItemIcon>
-                        <ListItemText>Ver Detalle</ListItemText>
-                    </MenuItem>
+                       <DrawerButton/>
                     <MenuItem>
                         <ListItemIcon>
                             <PowerSettingsNewOutlinedIcon fontSize="small" />
