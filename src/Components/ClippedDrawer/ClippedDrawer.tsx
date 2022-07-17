@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import { SideBar } from './SideBar/SideBar';
 
 import { CardTableContainer } from '../CardTableContainer/CardTableContainer';
-import { CampaignToolBar } from '../CardTableContainer/TableToolBar/CampaignToolBar/CampaignToolBar';
+import { CampaignToolBar } from '../CardTableContainer/CampaignToolBar/CampaignToolBar';
 
 export const ClippedDrawer = () => {
     return (

@@ -7,18 +7,16 @@ import Typography from '@mui/material/Typography';
 
 
 
-export const CardTableContainer = () => {
+export const CampaignToolBar = () => {
     return (
         <Toolbar>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
 
                 <Typography style={{ color: '#1E293B', display: 'inline' }} sx={{ fontFamily: 'Nunito' }}>
-                Campaña
-                </Typography>
-                
+               Campañas
+                </Typography>  
                 <BreadCrumb />
             </Box>
-
             <ButtonContained />
         </Toolbar>
     )
