@@ -2,8 +2,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
 import { TableToolBar } from './TableToolBar/TableToolBar';
+import EnhancedTable from './CampaignTable/CampaignTable';
 
-import EnhancedTable from './DataTable/DataTable';
 
 export const CardTableContainer = () => {
   return (

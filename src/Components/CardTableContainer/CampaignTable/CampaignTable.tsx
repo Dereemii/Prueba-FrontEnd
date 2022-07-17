@@ -9,13 +9,13 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
-
 import Checkbox from '@mui/material/Checkbox';
 
 import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
-import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 
 import { visuallyHidden } from '@mui/utils';
+
+import KebabContainer from './KebabContainer/KebabCotainer';
 
 interface Data {
   tipo: string;
@@ -352,7 +352,7 @@ export default function EnhancedTable() {
                       {row.descarga ? <SimCardDownloadOutlinedIcon /> : ''}
                     </TableCell>
                     <TableCell align="right">
-                      {row.detalle ? <MoreVertOutlinedIcon /> : ''}
+                      {row.detalle ?  <KebabContainer/> : ''}
                     </TableCell>
                   </TableRow>
                 );

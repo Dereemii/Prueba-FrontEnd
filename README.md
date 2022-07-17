@@ -14,5 +14,7 @@ Activar Campaña y eliminar) para esta prueba solo se utilizará la opción “V
 
 ![Primera Vista](public/img/Campaing-List.jpg)
 
-![Segunda Vista](public/img/Detail-View.jpg)
+![Segunda Vista](public/img/Kebab-Click.jpg)
+
+![Tercera Vista](public/img/Detail-View.jpg)
 

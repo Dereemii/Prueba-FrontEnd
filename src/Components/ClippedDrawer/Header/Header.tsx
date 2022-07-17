@@ -13,7 +13,6 @@ import Logo from '../../../assets/img/logo.svg'
 import "@fontsource/nunito";
 
 const Header = () => {
-
     const avatarStyle = {
         backgroundColor: "#ff5722",
         fontFamily: "Nunito"
