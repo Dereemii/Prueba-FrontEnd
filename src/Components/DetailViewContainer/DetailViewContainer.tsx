@@ -19,7 +19,7 @@ export const DetailViewContainer = () => {
       </MenuItem>
 
       <Drawer
-        sx={{ background: 'rgba(30, 58, 138, 0.7);' }}
+        sx={{ background: 'rgba(30, 58, 138, 0.7);'}}
         anchor='right'
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}>
