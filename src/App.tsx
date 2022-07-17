@@ -1,12 +1,15 @@
-import React from 'react';
-
+import Container from '@mui/material/Container';
+import { ClippedDrawer } from "./Components/ClippedDrawer/ClippedDrawer";
 
 function App() {
   return (
     <>
-    <h1>hola</h1>
+      <Container maxWidth={false} disableGutters={true} >
+        <ClippedDrawer />
+      </Container>
     </>
-  );
+  )
 }
+
 
 export default App;
