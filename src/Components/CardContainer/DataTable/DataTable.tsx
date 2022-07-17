@@ -13,46 +13,59 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 
+import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
+import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+
 import { visuallyHidden } from '@mui/utils';
 
 interface Data {
-  calories: string;
-  carbs: string;
-  fat: number;
-  name: string;
-  protein: number;
+  tipo: string;
+  canal: string;
+  fechaVigencia: string;
+  nombreCampana: string;
+  promVinculadas: number;
+  bandera: string;
+  estado: string,
+  descarga: string,
+  detalle: string,
 }
 
 function createData(
-  name: string,
-  calories: string,
-  fat: number,
-  carbs: string,
-  protein: number,
+  nombreCampana: string,
+  tipo: string,
+  fechaVigencia: string,
+  canal: string,
+  promVinculadas: number,
+  bandera: string,
+  estado: string,
+  descarga: string,
+  detalle: string,
+
 ): Data {
   return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
+    nombreCampana,
+    tipo,
+    fechaVigencia,
+    canal,
+    promVinculadas,
+    bandera,
+    estado,
+    descarga,
+    detalle,
   };
 }
 
 const rows = [
-  createData('Cupcake', 'Jumbo Mensual', 3.7, 'Ecommerce', 4.3),
-  createData('Donut','Jumbo Mensual', 25.0, 'Ecommerce', 4.9),
-  createData('Eclair', 'Jumbo Mensual', 16.0,'Ecommerce', 6.0),
-  createData('Jumbo Ofertas Enero', 'Jumbo Mensual', 6.0, 'Ecommerce', 4.0),
-  createData('Gingerbread', 'Jumbo Mensual', 16.0, 'Ecommerce', 3.9),
-  createData('Honeycomb', 'Jumbo Mensual', 3.2,'Ecommerce', 6.5),
-  createData('Ice cream sandwich', 'Jumbo Mensual', 9.0, 'Ecommerce', 4.3),
-  createData('Jelly Bean', 'Jumbo Mensual', 0.0, 'Ecommerce', 0.0),
-  createData('KitKat', 'Jumbo Mensual', 26.0,'Ecommerce', 7.0),
-  createData('Lollipop', 'Jumbo Mensual', 0.2, 'Ecommerce', 0.0),
-  createData('Marshmallow', 'Jumbo Mensual', 0, 'Ecommerce', 2.0),
-  createData('Nougat', 'Jumbo Mensual', 19.0, 'Ecommerce', 37.0),
-  createData('Oreo', 'Jumbo Mensual', 18.0, 'Ecommerce', 4.0),
+  createData('Jumbo Ofertas Enero', 'Jumbo Mensual', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle' ),
+  createData('Jumbo Days', 'FDM',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',3,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Quesos y Vinos','local', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Jumbo Ofertas', 'Ofertas tráfico',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Jumbo Semana 1', 'Especiales', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',  3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Ciclo Febrero', 'Semanal',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Fiesta de la cerveza', 'Local',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Ofertas XL', 'Voltante',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 , 'JUMBO - AR', 'Activada', 'descarga', 'detalle'),
+  createData('Escolares', 'Especiales',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Pendiente Activación', 'descarga', 'detalle'),
+  createData('Espumantes/Spritz', 'Tercera edad ',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',3,'JUMBO - AR', 'Desactivada', 'descarga', 'detalle'),
 ];
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -102,34 +115,58 @@ interface HeadCell {
 
 const headCells: readonly HeadCell[] = [
   {
-    id: 'name',
+    id: 'nombreCampana',
     numeric: false,
     disablePadding: true,
     label: 'Nombre de campaña',
   },
   {
-    id: 'calories',
+    id: 'tipo',
     numeric: false,
     disablePadding: false,
     label: 'Tipo',
   },
   {
-    id: 'fat',
-    numeric: true,
+    id: 'fechaVigencia',
+    numeric: false,
     disablePadding: false,
     label: 'Fecha vigencia',
   },
   {
-    id: 'carbs',
+    id: 'canal',
     numeric: false,
     disablePadding: false,
     label: 'Canal',
   },
   {
-    id: 'protein',
+    id: 'promVinculadas',
     numeric: true,
     disablePadding: false,
     label: 'Prom. vinculadas',
+  },
+  {
+    id: 'bandera',
+    numeric: false,
+    disablePadding: false,
+    label: 'Bandera',
+  },
+  {
+    id: 'estado',
+    numeric: false,
+    disablePadding: false,
+    label: 'Estado',
+  },
+  {
+    id: 'descarga',
+    numeric: false,
+    disablePadding: false,
+    label: '',
+  },
+  {
+    id: 'detalle',
+    numeric: false,
+    disablePadding: false,
+    label: '',
   },
 ];
 
@@ -193,11 +230,11 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState<Order>('asc');
-  const [orderBy, setOrderBy] = React.useState<keyof Data>('calories');
+  const [orderBy, setOrderBy] = React.useState<keyof Data>('tipo');
   const [selected, setSelected] = React.useState<readonly string[]>([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
@@ -210,19 +247,19 @@ export default function EnhancedTable() {
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelecteds = rows.map((n) => n.name);
+      const newSelecteds = rows.map((n) => n.nombreCampana);
       setSelected(newSelecteds);
       return;
     }
     setSelected([]);
   };
 
-  const handleClick = (event: React.MouseEvent<unknown>, name: string) => {
-    const selectedIndex = selected.indexOf(name);
+  const handleClick = (event: React.MouseEvent<unknown>, nombreCampana: string) => {
+    const selectedIndex = selected.indexOf(nombreCampana);
     let newSelected: readonly string[] = [];
 
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
+      newSelected = newSelected.concat(selected, nombreCampana);
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1));
     } else if (selectedIndex === selected.length - 1) {
@@ -247,7 +284,7 @@ export default function EnhancedTable() {
   };
 
 
-  const isSelected = (name: string) => selected.indexOf(name) !== -1;
+  const isSelected = (nombreCampana: string) => selected.indexOf(nombreCampana) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -276,17 +313,17 @@ export default function EnhancedTable() {
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
+                  const isItemSelected = isSelected(row.nombreCampana);
                   const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row.name)}
+                      onClick={(event) => handleClick(event, row.nombreCampana)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.name}
+                      key={row.nombreCampana}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -304,12 +341,20 @@ export default function EnhancedTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        {row.nombreCampana}
                       </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">{row.tipo}</TableCell>
+                      <TableCell align="right">{row.fechaVigencia}</TableCell>
+                      <TableCell align="right">{row.canal}</TableCell>
+                      <TableCell align="right">{row.promVinculadas}</TableCell>
+                      <TableCell align="right">{row.bandera}</TableCell>
+                      <TableCell align="right">{row.estado}</TableCell>
+                      <TableCell align="right">
+                        {row.descarga? <SimCardDownloadOutlinedIcon/>: ''}
+                      </TableCell>
+                      <TableCell align="right">
+                        {row.detalle? <MoreVertOutlinedIcon/>: ''}
+                        </TableCell>
                     </TableRow>
                   );
                 })}
