@@ -5,7 +5,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Header from '../Header/Header';
 import { ListItems } from '../ListItems/ListItems';
-import { CardContainer } from '../CardContainer/CardContainer';
+
+import BasicCard from '../CardContainer/Card';
+import { CampaignToolBar } from '../CardContainer/CampaignToolBar/CampaignToolBar';
 
 
 
@@ -17,8 +19,9 @@ export const ClippedDrawer = () => {
                 <Header />
                 <ListItems />
                 <Box component="main" sx={{ flexGrow: 1, p: 3 }} style={{ background: '#FAFBFF' }}>
-                    <Toolbar />
-                    <CardContainer />
+                    <Toolbar />           
+                    <CampaignToolBar/>
+                    <BasicCard />
                 </Box>
             </Box>
         </>

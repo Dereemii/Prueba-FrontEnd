@@ -10,7 +10,6 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 
-import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 
 import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
@@ -292,7 +291,7 @@ export default function EnhancedTable() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Paper sx={{ width: '100%', mb: 2 }}>
+   
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -307,7 +306,7 @@ export default function EnhancedTable() {
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
             />
-            <TableBody>
+            <TableBody >
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
               rows.slice().sort(getComparator(order, orderBy)) */}
               {stableSort(rows, getComparator(order, orderBy))
@@ -379,7 +378,7 @@ export default function EnhancedTable() {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </Paper>
+   
     </Box>
   );
 }
