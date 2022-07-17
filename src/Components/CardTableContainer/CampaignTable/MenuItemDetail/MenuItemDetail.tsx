@@ -12,7 +12,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
-import { DrawerButton } from '../../../DetailViewDrawerContainer/DrawerButton/DrawerButton';
+/* import { DrawerButton } from '../../../DetailViewDrawerContainer/DrawerDetailView/DrawerDetailView'; */
 
 const MenuItemDetail = () => {
 
@@ -34,7 +34,7 @@ const MenuItemDetail = () => {
                 <MoreVertOutlinedIcon />
             </IconButton>
             <Menu
-                sx={{ mt: '45px' }}
+                sx={{ mt: '45px', zIndex: 1000 }}
                 id="menu-appbar"
                 anchorEl={anchorViewDetail}
                 anchorOrigin={{
@@ -49,8 +49,8 @@ const MenuItemDetail = () => {
                 open={Boolean(anchorViewDetail)}
                 onClose={handleCloseUserMenu}
             >
-                <MenuList>
-                       <DrawerButton/>
+                <MenuList >
+                  {/*   <DrawerButton /> */}
                     <MenuItem>
                         <ListItemIcon>
                             <PowerSettingsNewOutlinedIcon fontSize="small" />
