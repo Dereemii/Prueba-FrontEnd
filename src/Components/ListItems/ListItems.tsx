@@ -1,3 +1,7 @@
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
@@ -10,47 +14,64 @@ import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 
+const drawerWidth = 75;
+
 export const ListItems = () => {
   return (
     <>
-        <ListItemButton>
-      <ListItemIcon>
-        <HomeOutlinedIcon />
-      </ListItemIcon>
-    </ListItemButton>
+                        <Drawer
+                    variant="permanent"
+                    sx={{
+                        width: drawerWidth,
+                        flexShrink: 0,
+                        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+                    }}
+                >
+                    <Toolbar />
+                    <Box sx={{ overflow: 'auto' }}>
+                        <List>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <HomeOutlinedIcon />
+                                </ListItemIcon>
+                            </ListItemButton>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingBagOutlinedIcon />
-      </ListItemIcon>
-    </ListItemButton>
-    
-    <ListItemButton>
-      <ListItemIcon>
-        <CampaignOutlinedIcon  />
-      </ListItemIcon>
-    </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <ShoppingBagOutlinedIcon />
+                                </ListItemIcon>
+                            </ListItemButton>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <LocalOfferOutlinedIcon />
-      </ListItemIcon>
-    </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <CampaignOutlinedIcon />
+                                </ListItemIcon>
+                            </ListItemButton>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <WidgetsOutlinedIcon/>
-      </ListItemIcon>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <LocalOfferOutlinedIcon />
+                                </ListItemIcon>
+                            </ListItemButton>
 
-    </ListItemButton>
-    
-    <Divider />
-    
-    <ListItemButton>
-      <ListItemIcon>
-        <ArrowCircleLeftOutlinedIcon/>
-      </ListItemIcon>
-    </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <WidgetsOutlinedIcon />
+                                </ListItemIcon>
+
+                            </ListItemButton>
+
+                        </List>
+                        <Divider />
+                        <List>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <ArrowCircleLeftOutlinedIcon />
+                                </ListItemIcon>
+                            </ListItemButton>
+                        </List>
+                    </Box>
+                </Drawer>
     </>
   )
 }

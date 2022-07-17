@@ -29,7 +29,7 @@ const Header = () => {
       };
 
     return (
-        <AppBar position="static" style={{ background: '#FFFFFF' }}>
+        <AppBar style={{ background: '#FFFFFF' }}  position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <img src={Logo} alt="Logo from the software"></img>
