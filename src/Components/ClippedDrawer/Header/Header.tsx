@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import AdbIcon from '@mui/icons-material/Adb';
 
 
-import Logo from '../../assets/img/logo.svg'
+import Logo from '../../../assets/img/logo.svg'
 
 import "@fontsource/nunito";
 

@@ -5,13 +5,15 @@ import { TableToolBar } from './TableToolBar/TableToolBar';
 
 import EnhancedTable from './DataTable/DataTable';
 
-export default function BasicCard() {
+export const CardTableContainer = () => {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <>
+     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <TableToolBar/>
         <EnhancedTable/>
       </CardContent>
     </Card>
-  );
+    </>
+  )
 }

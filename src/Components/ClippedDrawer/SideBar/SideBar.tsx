@@ -16,7 +16,7 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 
 const drawerWidth = 75;
 
-export const ListItems = () => {
+export const SideBar = () => {
   return (
     <>
                         <Drawer
