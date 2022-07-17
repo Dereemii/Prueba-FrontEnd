@@ -11,19 +11,20 @@ export const DetailViewContainer = () => {
 
   return (
     <>
-     <MenuItem onClick={() => setIsDrawerOpen(true)}>
-                    <ListItemIcon >
-                        <RemoveRedEyeOutlinedIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText>Ver Detalle</ListItemText>
-            </MenuItem>
+      <MenuItem onClick={() => setIsDrawerOpen(true)}>
+        <ListItemIcon >
+          <RemoveRedEyeOutlinedIcon fontSize="small" />
+        </ListItemIcon>
+        <ListItemText>Ver Detalle</ListItemText>
+      </MenuItem>
 
-            <Drawer
-                anchor='right'
-                open={isDrawerOpen}
-                onClose={() => setIsDrawerOpen(false)}>
-                    <DetailView/>           
-            </Drawer>
+      <Drawer
+        sx={{ background: 'rgba(30, 58, 138, 0.7);' }}
+        anchor='right'
+        open={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}>
+        <DetailView />
+      </Drawer>
     </>
   )
 }
