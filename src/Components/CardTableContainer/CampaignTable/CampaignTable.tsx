@@ -15,7 +15,7 @@ import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutl
 
 import { visuallyHidden } from '@mui/utils';
 
-import KebabContainer from './KebabContainer/KebabCotainer';
+import MenuItemDetail from './MenuItemDetail/MenuItemDetail'
 
 interface Data {
   tipo: string;
@@ -352,7 +352,7 @@ export default function EnhancedTable() {
                       {row.descarga ? <SimCardDownloadOutlinedIcon /> : ''}
                     </TableCell>
                     <TableCell align="right">
-                      {row.detalle ?  <KebabContainer/> : ''}
+                      {row.detalle ?  <MenuItemDetail/> : ''}
                     </TableCell>
                   </TableRow>
                 );

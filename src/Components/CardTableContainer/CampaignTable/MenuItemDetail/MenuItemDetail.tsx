@@ -2,19 +2,18 @@ import * as React from 'react';
 
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-
+import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
 
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
-const settings = ['Ver Detalle', 'Activar Campaña', 'Eliminar'];
-
-const KebabContainer = () => {
+const MenuItemDetail = () => {
 
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
         null
@@ -49,13 +48,28 @@ const KebabContainer = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                        <Typography textAlign="center">{setting}</Typography>
+                <MenuList>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <RemoveRedEyeOutlinedIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText>Ver Detalle</ListItemText>
                     </MenuItem>
-                ))}
+                    <MenuItem>
+                        <ListItemIcon>
+                            <PowerSettingsNewOutlinedIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText>Activar Campaña</ListItemText>
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <DeleteOutlineOutlinedIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText>Eliminar</ListItemText>
+                    </MenuItem>
+                </MenuList>
             </Menu>
         </Box>
     );
 };
-export default KebabContainer;
+export default MenuItemDetail;
