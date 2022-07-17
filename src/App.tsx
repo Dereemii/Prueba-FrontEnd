@@ -5,10 +5,9 @@ function App() {
   return (
     <>
       <Container maxWidth={false} disableGutters={true} >
-        <ClippedDrawer/>
+        <ClippedDrawer />
       </Container>
     </>
-
   )
 }
 

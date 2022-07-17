@@ -10,7 +10,7 @@ export const ActionsContainer = () => {
             <Box component="span" sx={{ p: 2 }}>
                 <Grid container spacing={2} columns={16}>
                     <Grid item xs={8} >
-                        <FilterListIcon/>
+                        <FilterListIcon />
                     </Grid>
                     <Grid item xs={8}>
                         <FileDownloadOutlinedIcon />

@@ -13,8 +13,8 @@ export const CampaignToolBar = () => {
             <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
 
                 <Typography style={{ color: '#1E293B', display: 'inline' }} sx={{ fontFamily: 'Nunito' }}>
-               Campañas
-                </Typography>  
+                    Campañas
+                </Typography>
                 <BreadCrumb />
             </Box>
             <ButtonContained />

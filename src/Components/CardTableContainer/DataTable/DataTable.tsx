@@ -55,16 +55,16 @@ function createData(
 }
 
 const rows = [
-  createData('Jumbo Ofertas Enero', 'Jumbo Mensual', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle' ),
-  createData('Jumbo Days', 'FDM',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',3,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Quesos y Vinos','local', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Jumbo Ofertas', 'Ofertas tráfico',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Jumbo Semana 1', 'Especiales', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',  3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Ciclo Febrero', 'Semanal',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Fiesta de la cerveza', 'Local',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 ,'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
-  createData('Ofertas XL', 'Voltante',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3 , 'JUMBO - AR', 'Activada', 'descarga', 'detalle'),
-  createData('Escolares', 'Especiales',  '18/01/2022 10:00 a 24/01/2022 9:00','Ecommerce', 3 , 'JUMBO - AR', 'Pendiente Activación', 'descarga', 'detalle'),
-  createData('Espumantes/Spritz', 'Tercera edad ',  '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce',3,'JUMBO - AR', 'Desactivada', 'descarga', 'detalle'),
+  createData('Jumbo Ofertas Enero', 'Jumbo Mensual', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Jumbo Days', 'FDM', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Quesos y Vinos', 'local', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Jumbo Ofertas', 'Ofertas tráfico', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Jumbo Semana 1', 'Especiales', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Ciclo Febrero', 'Semanal', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Fiesta de la cerveza', 'Local', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Creada', 'descarga', 'detalle'),
+  createData('Ofertas XL', 'Voltante', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Activada', 'descarga', 'detalle'),
+  createData('Escolares', 'Especiales', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Pendiente Activación', 'descarga', 'detalle'),
+  createData('Espumantes/Spritz', 'Tercera edad ', '18/01/2022 10:00 a 24/01/2022 9:00', 'Ecommerce', 3, 'JUMBO - AR', 'Desactivada', 'descarga', 'detalle'),
 ];
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -291,94 +291,94 @@ export default function EnhancedTable() {
 
   return (
     <Box sx={{ width: '100%' }}>
-   
-        <TableContainer>
-          <Table
-            sx={{ minWidth: 750 }}
-            aria-labelledby="tableTitle"
-            size={dense ? 'small' : 'medium'}
-          >
-            <EnhancedTableHead
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody >
-              {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-              rows.slice().sort(getComparator(order, orderBy)) */}
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const isItemSelected = isSelected(row.nombreCampana);
-                  const labelId = `enhanced-table-checkbox-${index}`;
 
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.nombreCampana)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.nombreCampana}
-                      selected={isItemSelected}
+      <TableContainer>
+        <Table
+          sx={{ minWidth: 750 }}
+          aria-labelledby="tableTitle"
+          size={dense ? 'small' : 'medium'}
+        >
+          <EnhancedTableHead
+            numSelected={selected.length}
+            order={order}
+            orderBy={orderBy}
+            onSelectAllClick={handleSelectAllClick}
+            onRequestSort={handleRequestSort}
+            rowCount={rows.length}
+          />
+          <TableBody >
+            {/* if you don't need to support IE11, you can replace the `stableSort` call with:
+              rows.slice().sort(getComparator(order, orderBy)) */}
+            {stableSort(rows, getComparator(order, orderBy))
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row, index) => {
+                const isItemSelected = isSelected(row.nombreCampana);
+                const labelId = `enhanced-table-checkbox-${index}`;
+
+                return (
+                  <TableRow
+                    hover
+                    onClick={(event) => handleClick(event, row.nombreCampana)}
+                    role="checkbox"
+                    aria-checked={isItemSelected}
+                    tabIndex={-1}
+                    key={row.nombreCampana}
+                    selected={isItemSelected}
+                  >
+                    <TableCell padding="checkbox">
+                      <Checkbox
+                        color="primary"
+                        checked={isItemSelected}
+                        inputProps={{
+                          'aria-labelledby': labelId,
+                        }}
+                      />
+                    </TableCell>
+                    <TableCell
+                      component="th"
+                      id={labelId}
+                      scope="row"
+                      padding="none"
                     >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          color="primary"
-                          checked={isItemSelected}
-                          inputProps={{
-                            'aria-labelledby': labelId,
-                          }}
-                        />
-                      </TableCell>
-                      <TableCell
-                        component="th"
-                        id={labelId}
-                        scope="row"
-                        padding="none"
-                      >
-                        {row.nombreCampana}
-                      </TableCell>
-                      <TableCell align="right">{row.tipo}</TableCell>
-                      <TableCell align="right">{row.fechaVigencia}</TableCell>
-                      <TableCell align="right">{row.canal}</TableCell>
-                      <TableCell align="right">{row.promVinculadas}</TableCell>
-                      <TableCell align="right">{row.bandera}</TableCell>
-                      <TableCell align="right">{row.estado}</TableCell>
-                      <TableCell align="right">
-                        {row.descarga? <SimCardDownloadOutlinedIcon/>: ''}
-                      </TableCell>
-                      <TableCell align="right">
-                        {row.detalle? <MoreVertOutlinedIcon/>: ''}
-                        </TableCell>
-                    </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow
-                  style={{
-                    height: (dense ? 33 : 53) * emptyRows,
-                  }}
-                >
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-   
+                      {row.nombreCampana}
+                    </TableCell>
+                    <TableCell align="right">{row.tipo}</TableCell>
+                    <TableCell align="right">{row.fechaVigencia}</TableCell>
+                    <TableCell align="right">{row.canal}</TableCell>
+                    <TableCell align="right">{row.promVinculadas}</TableCell>
+                    <TableCell align="right">{row.bandera}</TableCell>
+                    <TableCell align="right">{row.estado}</TableCell>
+                    <TableCell align="right">
+                      {row.descarga ? <SimCardDownloadOutlinedIcon /> : ''}
+                    </TableCell>
+                    <TableCell align="right">
+                      {row.detalle ? <MoreVertOutlinedIcon /> : ''}
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            {emptyRows > 0 && (
+              <TableRow
+                style={{
+                  height: (dense ? 33 : 53) * emptyRows,
+                }}
+              >
+                <TableCell colSpan={6} />
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+
     </Box>
   );
 }

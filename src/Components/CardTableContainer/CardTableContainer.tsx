@@ -8,12 +8,12 @@ import EnhancedTable from './DataTable/DataTable';
 export const CardTableContainer = () => {
   return (
     <>
-     <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <TableToolBar/>
-        <EnhancedTable/>
-      </CardContent>
-    </Card>
+      <Card sx={{ minWidth: 275 }}>
+        <CardContent>
+          <TableToolBar />
+          <EnhancedTable />
+        </CardContent>
+      </Card>
     </>
   )
 }

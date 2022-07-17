@@ -17,61 +17,61 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 const drawerWidth = 75;
 
 export const SideBar = () => {
-  return (
-    <>
-                        <Drawer
-                    variant="permanent"
-                    sx={{
-                        width: drawerWidth,
-                        flexShrink: 0,
-                        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-                    }}
-                >
-                    <Toolbar />
-                    <Box sx={{ overflow: 'auto' }}>
-                        <List>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <HomeOutlinedIcon />
-                                </ListItemIcon>
-                            </ListItemButton>
+    return (
+        <>
+            <Drawer
+                variant="permanent"
+                sx={{
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+                }}
+            >
+                <Toolbar />
+                <Box sx={{ overflow: 'auto' }}>
+                    <List>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <HomeOutlinedIcon />
+                            </ListItemIcon>
+                        </ListItemButton>
 
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <ShoppingBagOutlinedIcon />
-                                </ListItemIcon>
-                            </ListItemButton>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ShoppingBagOutlinedIcon />
+                            </ListItemIcon>
+                        </ListItemButton>
 
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <CampaignOutlinedIcon />
-                                </ListItemIcon>
-                            </ListItemButton>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <CampaignOutlinedIcon />
+                            </ListItemIcon>
+                        </ListItemButton>
 
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <LocalOfferOutlinedIcon />
-                                </ListItemIcon>
-                            </ListItemButton>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <LocalOfferOutlinedIcon />
+                            </ListItemIcon>
+                        </ListItemButton>
 
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <WidgetsOutlinedIcon />
-                                </ListItemIcon>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <WidgetsOutlinedIcon />
+                            </ListItemIcon>
 
-                            </ListItemButton>
+                        </ListItemButton>
 
-                        </List>
-                        <Divider />
-                        <List>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <ArrowCircleLeftOutlinedIcon />
-                                </ListItemIcon>
-                            </ListItemButton>
-                        </List>
-                    </Box>
-                </Drawer>
-    </>
-  )
+                    </List>
+                    <Divider />
+                    <List>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ArrowCircleLeftOutlinedIcon />
+                            </ListItemIcon>
+                        </ListItemButton>
+                    </List>
+                </Box>
+            </Drawer>
+        </>
+    )
 }
