@@ -1,11 +1,11 @@
 import Container from '@mui/material/Container';
-import { ClippedDrawer } from "./Components/ClippedDrawer/ClippedDrawer";
+import { ClippedDrawerContainer } from "./Components/ClippedDrawerContainer/ClippedDrawerContainer";
 
 function App() {
   return (
     <>
       <Container maxWidth={false} disableGutters={true} >
-        <ClippedDrawer />
+        <ClippedDrawerContainer />
       </Container>
     </>
   )

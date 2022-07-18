@@ -22,6 +22,7 @@ export const SideBar = () => {
             <Drawer
                 variant="permanent"
                 sx={{
+                    zIndex: 1000,
                     width: drawerWidth,
                     flexShrink: 0,
                     [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
