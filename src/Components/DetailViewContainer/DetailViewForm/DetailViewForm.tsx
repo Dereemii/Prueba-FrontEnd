@@ -218,8 +218,8 @@ export const DetailViewForm = () => {
       </Box>
 
       <Box my={2}>
-        <Button variant="contained">
-          <SaveIcon />
+        <Button variant="contained" style={{background: '#2563EB'}}>
+          <SaveIcon style={{marginRight: 8}}/>
           Guardar
         </Button>
       </Box>
