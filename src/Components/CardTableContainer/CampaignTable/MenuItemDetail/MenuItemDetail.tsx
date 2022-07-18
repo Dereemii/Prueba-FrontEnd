@@ -31,7 +31,7 @@ const MenuItemDetail = () => {
     return (
         <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <MoreVertOutlinedIcon />
+                <MoreVertOutlinedIcon style={{color: '#2563EB'}} />
             </IconButton>
             <Menu
                 sx={{ mt: '45px', zIndex: 1000 }}
@@ -53,7 +53,7 @@ const MenuItemDetail = () => {
                  <DetailViewContainer/>
                     <MenuItem>
                         <ListItemIcon>
-                            <PowerSettingsNewOutlinedIcon fontSize="small" />
+                            <PowerSettingsNewOutlinedIcon fontSize="small"  />
                         </ListItemIcon>
                         <ListItemText>Activar Campaña</ListItemText>
                     </MenuItem>

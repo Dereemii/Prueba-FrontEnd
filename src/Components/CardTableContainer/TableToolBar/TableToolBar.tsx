@@ -5,7 +5,7 @@ import { Toolbar } from "@mui/material"
 export const TableToolBar = () => {
     return (
         <>
-            <Toolbar>
+            <Toolbar disableGutters={true}>
                 <SearchBar />
                 <ActionsContainer />
             </Toolbar>

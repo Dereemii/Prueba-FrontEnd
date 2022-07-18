@@ -10,15 +10,17 @@ export const DetailViewToolbar = () => {
         <>
             <Toolbar disableGutters>
                 <Box component="span" sx={{ p: 2, }}>
-                    <CampaignOutlinedIcon/>
+                    <CampaignOutlinedIcon style={{color: '#2563EB'}}/>
                 </Box>
                 <Box component="span" sx={{ p: 2, flexGrow: 1 }}>
-                    <Typography>
+                    <Typography
+                    style={{fontSize: 20}}
+                    >
                         Nombre de Campaña
                     </Typography>
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
-                    <MoreHorizOutlinedIcon/>
+                    <MoreHorizOutlinedIcon style={{color: '#2563EB'}}/>
                 </Box>
             </Toolbar>
         </>

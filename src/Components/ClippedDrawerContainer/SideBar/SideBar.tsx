@@ -24,8 +24,11 @@ export const SideBar = () => {
                 sx={{
                     zIndex: 1000,
                     width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+                    [`& .MuiDrawer-paper`]:
+                    {
+                        width: drawerWidth,
+                        boxSizing: 'border-box'
+                    },
                 }}
             >
                 <Toolbar />
@@ -33,33 +36,32 @@ export const SideBar = () => {
                     <List>
                         <ListItemButton>
                             <ListItemIcon>
-                                <HomeOutlinedIcon />
+                                <HomeOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
                         </ListItemButton>
 
                         <ListItemButton>
                             <ListItemIcon>
-                                <ShoppingBagOutlinedIcon />
+                                <ShoppingBagOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
                         </ListItemButton>
 
                         <ListItemButton>
                             <ListItemIcon>
-                                <CampaignOutlinedIcon />
+                                <CampaignOutlinedIcon style={{ color: '#2563EB' }} />
                             </ListItemIcon>
                         </ListItemButton>
 
                         <ListItemButton>
                             <ListItemIcon>
-                                <LocalOfferOutlinedIcon />
+                                <LocalOfferOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
                         </ListItemButton>
 
                         <ListItemButton>
                             <ListItemIcon>
-                                <WidgetsOutlinedIcon />
+                                <WidgetsOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
-
                         </ListItemButton>
 
                     </List>
@@ -67,7 +69,7 @@ export const SideBar = () => {
                     <List>
                         <ListItemButton>
                             <ListItemIcon>
-                                <ArrowCircleLeftOutlinedIcon />
+                                <ArrowCircleLeftOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
                         </ListItemButton>
                     </List>
