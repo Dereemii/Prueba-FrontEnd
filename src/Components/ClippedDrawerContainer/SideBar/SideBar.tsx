@@ -45,7 +45,7 @@ export const SideBar = () => {
 
                         <ListItemButton>
                             <ListItemIcon>
-                                <CampaignOutlinedIcon />
+                                <CampaignOutlinedIcon style={{color: '#2563EB'}} />
                             </ListItemIcon>
                         </ListItemButton>
 

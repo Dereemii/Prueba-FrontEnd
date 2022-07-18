@@ -33,7 +33,7 @@ export const DetailViewForm = () => {
       </Box>
 
       <Divider />
-
+{/* --------- Segmentacion --------- */}
       <Box
         mt={1}
         component="form"
@@ -127,7 +127,7 @@ export const DetailViewForm = () => {
       </Box>
 
       <Divider />
-
+{/* --------- Datos Generales --------- */}
       <Box
         mt={1}
         component="form"

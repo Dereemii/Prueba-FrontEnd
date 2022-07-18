@@ -9,10 +9,18 @@ import Typography from '@mui/material/Typography';
 
 export const CampaignToolBar = () => {
     return (
-        <Toolbar>
+        <Toolbar disableGutters={true}>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-
-                <Typography style={{ color: '#1E293B', display: 'inline' }} sx={{ fontFamily: 'Nunito' }}>
+                <Typography
+                    style={{
+                        color: 'rgba(0, 0, 0, 0.87)',
+                        display: 'inline',
+                        fontSize: 24
+                    }}
+                    sx={{ fontFamily: 'Nunito' }}
+                    mr={2}
+                    >
+                    
                     Campañas
                 </Typography>
                 <BreadCrumb />

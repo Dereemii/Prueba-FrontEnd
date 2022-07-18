@@ -1,7 +1,7 @@
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
+import { Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -52,18 +52,18 @@ export const SearchBar = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <Search>
+        <AppBar position="static" style={{ backgroundColor: '#ffff', color: '#78909C',  boxShadow: '0px 0px' }}>
+          <Toolbar disableGutters={true}>
+            <Search style={{ border: '1px solid #CFD8DC', borderRadius: 4, width: 300}} >
               <SearchIconWrapper>
-                <SearchIcon />
+                <SearchIcon style={{color: '#2563EB'}}/>
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Buscar"
+                placeholder="Buscar" 
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
-          </Toolbar>
+            </Toolbar>  
         </AppBar>
       </Box>
     </>

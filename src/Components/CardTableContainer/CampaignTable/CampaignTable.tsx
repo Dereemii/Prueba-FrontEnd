@@ -202,6 +202,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
                 </TableCell>
                 {headCells.map((headCell) => (
                     <TableCell
+                        style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.87)'}}
                         key={headCell.id}
                         align={headCell.numeric ? 'right' : 'left'}
                         padding={headCell.disablePadding ? 'none' : 'normal'}
@@ -348,7 +349,7 @@ export default function EnhancedTable() {
                                         <TableCell align="right">{row.bandera}</TableCell>
                                         <TableCell align="right">{row.estado}</TableCell>
                                         <TableCell align="right">
-                                            {row.descarga ? <SimCardDownloadOutlinedIcon /> : ''}
+                                            {row.descarga ? <SimCardDownloadOutlinedIcon style={{color: '#2563EB'}} /> : ''}
                                         </TableCell>
                                         <TableCell align="right">
                                             {row.detalle ? <MenuItemDetail /> : ''}
