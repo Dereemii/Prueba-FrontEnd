@@ -24,8 +24,11 @@ export const SideBar = () => {
                 sx={{
                     zIndex: 1000,
                     width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+                    [`& .MuiDrawer-paper`]:
+                    {
+                        width: drawerWidth,
+                        boxSizing: 'border-box'
+                    },
                 }}
             >
                 <Toolbar />
@@ -66,7 +69,7 @@ export const SideBar = () => {
                     <List>
                         <ListItemButton>
                             <ListItemIcon>
-                                <ArrowCircleLeftOutlinedIcon style={{ color: '#BDBDBD'}}/>
+                                <ArrowCircleLeftOutlinedIcon style={{ color: '#BDBDBD' }} />
                             </ListItemIcon>
                         </ListItemButton>
                     </List>

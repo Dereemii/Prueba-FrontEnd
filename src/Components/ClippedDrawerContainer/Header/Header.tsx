@@ -19,13 +19,13 @@ const Header = () => {
     };
 
     return (
-        <AppBar style={{ background: '#FFFFFF' }} position="fixed" /* sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} */ >
+        <AppBar style={{ background: '#FFFFFF' }} position="fixed">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box>
                         <img src={Logo} alt="Logo from the software"></img>
                     </Box>
-
+                    
                     <Box component="span" sx={{ p: 2, flexGrow: 1 }}>
                         <Typography style={{ color: '#1E293B' }} sx={{ fontFamily: 'Nunito' }}>
                             Price & Promotions management
